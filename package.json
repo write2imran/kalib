@@ -1,0 +1,24 @@
+{
+  "name": "kalib",
+  "version": "1.0.0",
+  "description": "Landing page template design process",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/write2imran/kalib.git"
+  },
+  "keywords": [
+    "UI",
+    "Dashboard",
+    "Template"
+  ],
+  "author": "Imran A Rauf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/write2imran/kalib/issues"
+  },
+  "homepage": "https://github.com/write2imran/kalib#readme"
+}
