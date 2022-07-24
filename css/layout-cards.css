@@ -1,0 +1,28 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.card-single {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.card-single div:first-child h1 {
+  color: var(--main-color);
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+.card-single div:first-child span {
+  color: var(--text-grey);
+}
+
+.card-single div:last-child span {
+  color: var(--main-color);
+  font-size: 2rem;
+}

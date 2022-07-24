@@ -1,7 +1,12 @@
+@import url("./layout-cards.css");
+
 :root {
   --main-color: #007eac;
   --color-dark: #1d2231;
   --text-grey: #8390a2;
+
+  --menu-width: 270px;
+  --header-height: 70px;
 }
 
 * {
@@ -12,8 +17,12 @@
   text-decoration: none;
 }
 
+.container .main-content {
+  padding: 20px;
+}
+
 header {
-  height: 70px;
+  height: var(--header-height);
   background: #fff;
   justify-content: space-between;
   padding: 1rem 0rem 0rem 1rem;
@@ -38,24 +47,49 @@ header span {
 
 .sidebar {
   padding-top: 1rem;
-  width: 320px;
+  width: var(--menu-width);
   position: fixed;
   left: 0;
 
   height: 100%;
   background: var(--main-color);
+
+  transition: all 0.3s ease-in-out;
+  
+}
+
+#toggle-menu {
+  display: none;
+}
+#toggle-menu:checked + .sidebar {
+  width: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+#toggle-menu:checked + .sidebar li a span:last-child {
+  display: none;
+}
+
+#toggle-menu:checked ~ .main-content {
+  margin-left: 60px;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-content {
-  margin-left: 345px;
+  margin-left: var(--menu-width);
+  margin-top: calc(var(--header-height)+ 20);
+  min-height: calc(100vw - var(--menu-width) -1);
+  padding-top: 20px;
+  padding-left: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar-menu {
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 .sidebar-menu li {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   padding-left: 0.5rem;
 }
 
@@ -68,8 +102,8 @@ header span {
 .sidebar-menu a.active {
   background: #fff;
   color: var(--color-dark);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 30px 0px 0px 30px;
 }
 
